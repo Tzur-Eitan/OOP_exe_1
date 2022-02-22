@@ -11,8 +11,23 @@ public class Caribou extends Animal
     @Override
     public String toString()
     {
-        // TODO: Implement.
-        return null;
+        String data = "Caribou. " +
+                      "My weight is: " + this.weight + " " +
+                      "and my color is: " + this.color;
+
+        switch (this.season)
+        {
+            case WINTER -> data = "Caribou. " +
+                                  "I am migrating south. " +
+                                  "My weight is: " + this.weight + " " +
+                                  "and my color is: " + this.color;
+            case SUMMER -> data = "Caribou. " +
+                                  "I am migrating north. " +
+                                  "My weight is: " + this.weight + " " +
+                                  "and my color is: " + this.color;
+        }
+
+        return data;
     }
 
     @Override
