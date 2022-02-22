@@ -4,7 +4,8 @@ package Ex1;
 import java.util.Random;
 import java.util.Scanner;
 
-public class SeasonUtilTest {
+public class SeasonUtilTest
+{
     static final int TOTAL = 8;
     static final int ANIMAL_MIN_INITIAL_WEIGHT = 200;
     static final int ANIMAL_MAX_INITIAL_WEIGHT = 250;
@@ -13,7 +14,8 @@ public class SeasonUtilTest {
     static final Season INITIAL_SEASON = Season.FALL;
     static Random random;
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         System.out.println("Enter Seed: ");
         Scanner scanner = new Scanner(System.in);
         random = new Random(scanner.nextInt());
@@ -46,11 +48,11 @@ public class SeasonUtilTest {
         }
 
         System.out.println("\n---Sorting animals after season change---\n");
-        SeasonUtil.sortSeasonable(animals);
+        SeasonUtil.sort(animals);
         System.out.println(SeasonUtil.reportAll(animals));
 
         System.out.println("\n---Sorting trees after season change---\n");
-        SeasonUtil.sortSeasonable(trees);
+        SeasonUtil.sort(trees);
         System.out.println(SeasonUtil.reportAll(trees));
 
     }
