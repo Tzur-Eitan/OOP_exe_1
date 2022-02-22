@@ -23,10 +23,10 @@ public class Bear extends Animal
 
         switch (this.season)
         {
-            case WINTER -> this.weight -= (this.weight * 0.2);
-            case SPRING -> this.weight -= (this.weight * 0.25);
-            case SUMMER -> this.weight += (this.weight * (1.0 / 3.0));
-            case FALL -> this.weight += (this.weight * 0.25);
+            case WINTER -> this.weight = (int)Math.floor((weight * 0.8));
+            case SPRING -> this.weight = (int)Math.floor((weight * 0.75));
+            case SUMMER -> this.weight = (int)Math.floor((weight * 4d / 3d));
+            case FALL -> this.weight += (this.weight * 1.25);
         }
     }
 }
