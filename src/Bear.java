@@ -1,16 +1,20 @@
-public class Bear extends Animal {
+public class Bear extends Animal
+{
 
-    Bear(int weight, Season season) {
+    Bear(int weight, Season season)
+    {
         // TODO: Implement.
         super(0,null,null);
     }
     @Override
-    public String toString() {
+    public String toString()
+    {
         // TODO: Implement.
         return null;
     }
     @Override
-    public void changeSeason() {
-        // TODO: Implement.
+    public void changeSeason()
+    {
+        this.season = Season.getNext(this.season);
     }
 }
