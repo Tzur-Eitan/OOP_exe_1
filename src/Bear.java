@@ -1,3 +1,5 @@
+import Ex1.Season;
+
 public class Bear extends Animal
 {
 
