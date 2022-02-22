@@ -13,14 +13,14 @@ public class SeasonUtil
 
     static String reportAll(Seasonable[] seasonables)
     {
-        String data = seasonables[0].toString();
+        StringBuilder data = new StringBuilder(seasonables[0].toString());
 
         for (int i = 1; i < seasonables.length; i++)
         {
-            data += "\n";
-            data += seasonables[i].toString();
+            data.append("\n");
+            data.append(seasonables[i].toString());
         }
 
-        return data;
+        return data.toString();
     }
 }
