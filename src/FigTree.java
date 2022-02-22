@@ -1,6 +1,5 @@
 public class FigTree extends Tree {
 
-
     FigTree(int height, Season season) {
         // TODO: Implement.
         super(0,null,null);
@@ -13,6 +12,6 @@ public class FigTree extends Tree {
     }
     @Override
     public void changeSeason() {
-        // TODO: Implement.
-    }
+        this.season = Season.getNext(this.season);
+        }
 }
