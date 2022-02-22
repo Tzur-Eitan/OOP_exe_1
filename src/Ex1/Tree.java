@@ -1,3 +1,5 @@
+package Ex1;
+
 public abstract class Tree implements Comparable<Tree>, Seasonable {
     protected int height;
     protected Season season;
