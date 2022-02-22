@@ -1,3 +1,5 @@
+package Ex1;
+
 import Ex1.Season;
 
 public class Bear extends Animal
@@ -21,10 +23,10 @@ public class Bear extends Animal
 
         switch (this.season)
         {
-            case WINTER -> this.weight -= (this.weight * 0.2);
-            case SPRING -> this.weight -= (this.weight * 0.25);
-            case SUMMER -> this.weight += (this.weight * (1.0 / 3.0));
-            case FALL -> this.weight += (this.weight * 0.25);
+            case Season.WINTER -> this.weight -= (this.weight * 0.2);
+            case Season.SPRING -> this.weight -= (this.weight * 0.25);
+            case Season.SUMMER -> this.weight += (this.weight * (1.0 / 3.0));
+            case Season.FALL -> this.weight += (this.weight * 0.25);
         }
     }
 }

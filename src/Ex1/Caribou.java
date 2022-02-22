@@ -1,3 +1,5 @@
+package Ex1;
+
 public class Caribou extends Animal
 {
 
@@ -24,8 +26,8 @@ public class Caribou extends Animal
     {
         switch (this.season)
         {
-            case WINTER -> this.color = Color.WHITE;
-            case SPRING -> this.color = Color.BROWN;
+            case Season.WINTER -> this.color = Color.WHITE;
+            case Season.SPRING -> this.color = Color.BROWN;
         }
     }
 }

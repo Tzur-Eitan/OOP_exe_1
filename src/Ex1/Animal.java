@@ -1,6 +1,4 @@
-import Ex1.Color;
-import Ex1.Season;
-import Ex1.Seasonable;
+package Ex1;
 
 public abstract class Animal implements Seasonable,Comparable<Animal>{
     protected int weight;
