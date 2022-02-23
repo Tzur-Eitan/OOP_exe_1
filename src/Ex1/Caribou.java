@@ -15,18 +15,23 @@ public class Caribou extends Animal
                       "My weight is: " + this.weight + " " +
                       "and my color is: " + this.color;
 
-        switch (this.season) {
+        switch (this.season)
+        {
             case WINTER:
                 data = "Caribou. " +
                           "I am migrating south. " +
                           "My weight is: " + this.weight + " " +
                           "and my color is: " + this.color;
+                this.color = Color.WHITE;
                 break;
             case SUMMER:
                 data = "Caribou. " +
                           "I am migrating north. " +
                           "My weight is: " + this.weight + " " +
                           "and my color is: " + this.color;
+                break;
+            case SPRING:
+                this.color = Color.BROWN;
                 break;
             default:
                 break;

@@ -31,7 +31,8 @@ public class Bear extends Animal
     {
         this.season = Season.getNext(this.season);
 
-        switch (this.season){
+        switch (this.season)
+        {
             case WINTER:
                 this.weight = (int)Math.floor((weight * 0.8));
                 break;
