@@ -1,6 +1,7 @@
 package Ex1;
 
-public abstract class Animal implements Seasonable,Comparable<Animal>{
+public abstract class Animal implements Comparable<Animal>, Seasonable
+{
     protected int weight;
     protected Season season;
     protected Color color;
