@@ -4,7 +4,6 @@ public abstract class Animal implements Seasonable,Comparable<Animal>{
     protected int weight;
     protected Season season;
     protected Color color;
-    // TODO: Add auxiliary fields and functions.
 
     Animal(int weight, Season season, Color color)
     {

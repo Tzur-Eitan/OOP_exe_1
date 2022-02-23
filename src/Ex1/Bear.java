@@ -1,7 +1,5 @@
 package Ex1;
 
-import Ex1.Season;
-
 public class Bear extends Animal
 {
     Bear(int weight, Season season)
@@ -12,8 +10,20 @@ public class Bear extends Animal
     @Override
     public String toString()
     {
-        // TODO: Implement.
-        return null;
+        if (this.season.compareTo(Season.WINTER) == 0)
+        {
+            return "Bear. " +
+                    "I am sleeping. " +
+                    "My weight is: " + this.weight + " " +
+                    "and my color is: " + this.color;
+        }
+
+        else
+        {
+            return "Bear. " +
+                    "My weight is: " + this.weight + " " +
+                    "and my color is: " + this.color;
+        }
     }
 
     @Override
@@ -23,10 +33,10 @@ public class Bear extends Animal
 
         switch (this.season)
         {
-            case WINTER -> this.weight -= (this.weight * 0.2);
-            case SPRING -> this.weight -= (this.weight * 0.25);
-            case SUMMER -> this.weight += (this.weight * (1.0 / 3.0));
-            case FALL -> this.weight += (this.weight * 0.25);
+            case WINTER -> this.weight = (int)Math.floor((weight * 0.8));
+            case SPRING -> this.weight = (int)Math.floor((weight * 0.75));
+            case SUMMER -> this.weight = (int)Math.floor((weight * 4d / 3d));
+            case FALL -> this.weight += (this.weight * 1.25);
         }
     }
 }
