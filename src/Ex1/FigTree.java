@@ -1,65 +1,70 @@
 package Ex1;
 
 public class FigTree extends Tree {
-    protected Boolean haveLeafs = null;
-    protected Boolean haveFruit = null;
 
     FigTree(int height, Season season) {
         super(height, season, null);
-//        changePropertiesBySeason();
+        changePropertiesBySeason(true);
     }
 
     @Override
     public String toString() {
 
-        return switch (this.season) {
-            case WINTER -> "Fig tree. " +
-                    "My height is: " + this.height +
-                    " and I have no leaves";
-            case SPRING, FALL -> "Fig tree. " +
-                    "My height is: " + this.height +
-                    " and my color is: " + this.leavesColor;
-            case SUMMER -> "Fig tree. " +
-                    "I give fruit. " +
-                    "My height is: " + this.height +
-                    " and my color is: " + this.leavesColor;
-        };
+        switch (this.season) {
+            case WINTER:
+                return "Fig tree. " +
+                        "My height is: " + this.height +
+                        " and I have no leaves";
+            case SPRING:
+            case FALL:
+                return "Fig tree. " +
+                        "My height is: " + this.height +
+                        " and my color is: " + this.leavesColor;
+            case SUMMER:
+                return "Fig tree. " +
+                        "I give fruit. " +
+                        "My height is: " + this.height +
+                        " and my color is: " + this.leavesColor;
+            default:
+                return null;
+        }
     }
 
     @Override
     public void changeSeason() {
         this.season = Season.getNext(this.season);
-        changePropertiesBySeason();
+        changePropertiesBySeason(false);
     }
 
-    private void changePropertiesBySeason(){
+
+    private void changePropertiesBySeason(Boolean start){
         switch (this.season) {
-            case WINTER -> {
-                this.height += 20;
+            case WINTER:
+                this.height += start? 0 : 20;
                 this.leavesColor = null;
-                this.haveLeafs = false;
+                this.haveLeaves = false;
                 this.haveFruit = false;
-            }
-            case SPRING -> {
-                this.height += 30;
+                break;
+            case SPRING:
+                this.height += start? 0 : 30;
                 this.leavesColor = Color.GREEN;
-                this.haveLeafs = true;
+                this.haveLeaves = true;
                 this.haveFruit = false;
-            }
-            case SUMMER -> {
-                this.height += 30;
+                break;
+            case SUMMER:
+                this.height += start? 0 : 30;
                 this.leavesColor = Color.GREEN;
-                this.haveLeafs = true;
+                this.haveLeaves = true;
                 this.haveFruit = true;
-            }
-            case FALL -> {
-                this.height += 20;
+                break;
+            case FALL:
+                this.height += start? 0 : 20;
                 this.leavesColor = Color.YELLOW;
-                this.haveLeafs = true;
+                this.haveLeaves = true;
                 this.haveFruit = false;
-            }
-            default -> {
-            }
+                break;
+            default:
+                break;
         }
     }
 }

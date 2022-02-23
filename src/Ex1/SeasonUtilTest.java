@@ -16,6 +16,7 @@ public class SeasonUtilTest
 
     public static void main(String[] args)
     {
+
         System.out.println("Enter Seed: ");
         Scanner scanner = new Scanner(System.in);
         random = new Random(scanner.nextInt());
