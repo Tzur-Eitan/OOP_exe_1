@@ -15,16 +15,21 @@ public class Caribou extends Animal
                       "My weight is: " + this.weight + " " +
                       "and my color is: " + this.color;
 
-        switch (this.season)
-        {
-            case WINTER -> data = "Caribou. " +
-                                  "I am migrating south. " +
-                                  "My weight is: " + this.weight + " " +
-                                  "and my color is: " + this.color;
-            case SUMMER -> data = "Caribou. " +
-                                  "I am migrating north. " +
-                                  "My weight is: " + this.weight + " " +
-                                  "and my color is: " + this.color;
+        switch (this.season) {
+            case WINTER:
+                data = "Caribou. " +
+                          "I am migrating south. " +
+                          "My weight is: " + this.weight + " " +
+                          "and my color is: " + this.color;
+                break;
+            case SUMMER:
+                data = "Caribou. " +
+                          "I am migrating north. " +
+                          "My weight is: " + this.weight + " " +
+                          "and my color is: " + this.color;
+                break;
+            default:
+                break;
         }
 
         return data;
@@ -39,10 +44,15 @@ public class Caribou extends Animal
 
     public void setColor()
     {
-        switch (this.season)
-        {
-            case WINTER -> this.color = Color.WHITE;
-            case SPRING -> this.color = Color.BROWN;
+        switch (this.season) {
+            case WINTER:
+                this.color = Color.WHITE;
+                break;
+            case SPRING:
+                this.color = Color.BROWN;
+                break;
+            default:
+                break;
         }
     }
 }
